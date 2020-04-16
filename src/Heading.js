@@ -1,15 +1,45 @@
 import React, { useState, useEffect } from "react";
-import "./Heading.css";
-import axios from 'axios';
+import styled from 'styled-components';
 
+// -------STYLED COMPONENTS-------
+const Header = styled.div`
+    text-align: left;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    width: 50%;
+    color: #000000;
+`
+
+const H2 = styled.h2`
+    &::before {
+        content: ${props => props.emoji ? props.emoji : 'inherit'};
+    }
+    font-size: 3rem;
+`
+
+const H4 = styled.h4`
+    font-size: 2rem;
+`
+
+const Copyright = styled.p`
+    font-size: 1rem;
+`
+
+const Explanation = styled.p`
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 140%;
+`
+
+// -------HEADING COMPONENT-------
 function Heading({ title, date, copyright, explanation }) {
     return (
-        <div className="Heading">
-            <h2>{title}</h2>
-            <h4>{date}</h4>
-            <p className='explanation'>{explanation}</p>
-            <p className='copyright'>© 2020 <b>{copyright}</b></p>
-        </div>
+        <Header className='header'>
+            <H2>{title}</H2>
+            <H4>🗓 {date}</H4>
+            <Explanation className='explanation'>{explanation}</Explanation>
+            <Copyright className='copyright'>© <b>{copyright}</b></Copyright>
+        </Header>
     );
 }
 
