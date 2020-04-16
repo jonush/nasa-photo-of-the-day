@@ -1,5 +1,6 @@
 body {
-  background-color: #555e6f;
+  background-color: #444c5b;
+  padding-bottom: 5%;
 }
 
 .App {
@@ -55,4 +56,44 @@ img {
   border: 5px solid #FFFFFF;
   width: 50%;
   box-shadow: 5px 5px 10px -3px #000000;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+form {
+  margin: 0 auto 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 15%;
+  padding: 3px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  width: 5%;
+  padding: 2px 0;
+  font-size: 1.2rem;
+  margin-left: 1%;
+  border-radius: 10px;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #444c5b;
+  box-shadow:0px 0px 0px 2px #FFFFFF inset;
+}
+
+h1 {
+  font-size: 5rem;
 }
